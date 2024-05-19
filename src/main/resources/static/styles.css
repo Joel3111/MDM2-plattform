@@ -1,0 +1,17 @@
+body {
+    background-color: #7ff581;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+#preview {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}

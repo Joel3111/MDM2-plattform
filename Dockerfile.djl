@@ -1,0 +1,16 @@
+FROM openjdk:21-jdk-slim
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Install DJL Serving
+RUN apt-get update && apt-get install -y python3-pip
+RUN pip3 install djl-serving
+
+# Copy model files
+COPY ./models /usr/src/app/models
+
+EXPOSE 8081
+
+# Command to run DJL Serving
+CMD ["djl-serving", "-s", "/usr/src/app/models"]
